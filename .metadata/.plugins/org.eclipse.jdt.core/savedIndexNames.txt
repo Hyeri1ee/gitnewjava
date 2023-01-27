@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\Galaxy\.eclipse\java-2022-12\자바학습\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+3352231525.index
+1750228778.index
