@@ -20,7 +20,7 @@ public class Num3003 {
 		System.out.println(phone);
 		
 		
-			
+		sc.close();
 	}
 
 }
