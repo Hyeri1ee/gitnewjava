@@ -13,7 +13,6 @@ public class Num2480 {
 		int[] n = new int[6];
 		int num;
 		int result=0;
-		int max = 0;
 		for (int i=0; i<3;i++) {
 			num = sc.nextInt();
 			switch (num) {
@@ -39,27 +38,40 @@ public class Num2480 {
 				break;
 			}
 		}
+		//최댓값 정하기
+		int maxInt = makeresult(n);
+		
 		for (int i=0 ; i<6;i++) {
 			if (n[i] == 3) {
-				result = 10000+n[i]*1000;
+				result = 10000+(i+1)*1000;
 				break;
 			}
 			else if (n[i] == 2) {
-				result = 1000+n[i]*100;
+				result = 1000+(i+1)*100;
+				break;
 			}
-			else {
-				if (n[i] != 0) {
-					if (max < n[i])
-						max = n[i];
-				}
-				result = max * 100;
-				
-				
+			//여기 수정해야함
+			else if (n[i] !=0) {
+				result = maxInt * 100;
+				break;
 			}
 		}
 		
 		System.out.println(result);
 		
+		
+	}
+
+	//여기 수정해야함
+	private static int makeresult(int[] n) {
+		int max =0;
+		int result;
+		for (int i = 0; i<n.length;i++) {
+			if (n[i] != 0) {
+				max = n[i];
+			}
+		}
+		return max;
 	}
 
 }
