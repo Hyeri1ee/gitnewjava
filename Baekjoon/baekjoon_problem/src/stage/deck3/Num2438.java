@@ -11,9 +11,13 @@ public class Num2438 {
 		Scanner sc = new Scanner(System.in);
 		int num = sc.nextInt();
 		char c = '*';
-		for (int i = num;i>=0;i--) {
-			for (int j = 0; j<i;j++) {
-				System.out.print(" ");
+		for (int i = 1; i< num + 1;i++) {
+			for (int j = num; j > 0;j--) {
+				if (i<j) {
+					System.out.print(" ");
+				}else {
+					System.out.print(c);
+				}
 				
 			}
 			System.out.println("");
