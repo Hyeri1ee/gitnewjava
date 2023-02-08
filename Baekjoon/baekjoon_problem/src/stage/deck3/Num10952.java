@@ -1,28 +1,28 @@
 package stage.deck3;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Num10952 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		/*
 		 * 백준 번호 :  10952
 		 */
-		Scanner sc = new Scanner(System.in);
-		String s;
-		int[] a = new int[2];
-		int[] b = new int[100];
-		a[0] = 1;
-		int i = 0;
-		while (a[0]+a[1] != 0) {
-			s = sc.nextLine();
-			//a = Integer.parseUnsignedInt(s.split(" "));
-			b[i] = a[0]+a[1];
-			i++;
+		String result = "";
+		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+		while(true) {
+			String s = bf.readLine();
+			StringTokenizer st = new StringTokenizer(s);
+			int a = Integer.parseInt(st.nextToken());
+			int b = Integer.parseInt(st.nextToken());
+			if (a == 0 && b == 0)
+				break;
+			result +=(a+b)+"\n"; //배열 대신 String에 첨가하기
 		}
-		for (int j = 0;j < i ;j++) {
-			System.out.println(b[j]);
-		}
+		System.out.println(result);
 		
 	}
 

@@ -1,20 +1,27 @@
 package stage.deck2;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
-public class Num2480 {
+public class Num2480_1 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		/*
 		 * 백준 번호 : 2480
 		 */
-		//scanner 이용
-		Scanner sc = new Scanner(System.in);
-		int a = sc.nextInt();
-		int b = sc.nextInt();
-		int c = sc.nextInt();
+		//bufferedreader 사용
+		
+		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+		String s = bf.readLine();
+		StringTokenizer st = new StringTokenizer(s);
+		int a = Integer.parseInt(st.nextToken());
+		int b = Integer.parseInt(st.nextToken());
+		int c = Integer.parseInt(st.nextToken());
 		int result;
 		
+		//String array[] = s.split(" ");
 		if (a==b && b==c) {
 			result = 10000 + a*1000;
 		}else if ( (a==b && b!=c) || (a==c && b!=c) || (b==c && b!=a) ){
@@ -47,5 +54,6 @@ public class Num2480 {
 		else
 			return c;
 	}
+	}
 
-}
+
