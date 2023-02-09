@@ -16,8 +16,8 @@ public class Num1546 {
 		String arr[] = s.split(" ");
 		int arr2[] = new int[n]; 
 		double arr3[] = new double[n];
-		int max = 0;
-		int sum = 0;
+		double max=0;
+		double sum = 0;
 		//최고점 찾기
 		for (int i = 0; i<n;i++) {
 			arr2[i] = Integer.parseInt(arr[i]);
@@ -26,10 +26,10 @@ public class Num1546 {
 		}
 		//과목 조정하기
 		for (int i = 0; i< n;i++) {
-			arr3[i] =(1.0*arr2[i]/max*100);
+			arr3[i] =(arr2[i]/(max*1.000))*100;
 			sum += arr3[i];
 		}
-		System.out.printf("%.3Lf" , sum/n);
+		System.out.println((double)Math.round(sum/n*1000)/1000);
 		
 		
 	}
