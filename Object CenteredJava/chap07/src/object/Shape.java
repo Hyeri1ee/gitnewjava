@@ -6,9 +6,9 @@ public class Shape {
 	private int height;
 	
 	public Shape(char t, int w, int h) {
-		type = t;
-		width = w;
-		height = h;
+		this.type = t; //this : 이 코드를 실행하는 객체의 인스턴스 변수로 삼겠다는 뜻
+		this.width = w;
+		this.height = h;
 	}
 	
 	public float getArea() {
